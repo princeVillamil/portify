@@ -1,0 +1,224 @@
+*{
+  box-sizing: border-box;
+}
+.screenWrapper{
+  background-color: #F9C335;
+  width: 100%;
+  /* display: none; */
+  height: 100vh;
+  padding: 25px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  height: max-content;
+  /* overflow: hidden; */
+  /* display: none; */
+  /* overflow: hidden; */
+}
+
+.app{
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  align-items: center;
+  /* outline: 1px dotted red; */
+}
+.app .appBg{
+  background-color: #F0EADB;  
+  display: flex;
+  width: max-content;
+  justify-content: center;
+  border: 5px solid rgb(48, 48, 44);
+  border-radius: 15px;
+  -webkit-box-shadow: rgb(48, 48, 44) 5px 4px 0px;
+  -moz-box-shadow: rgb(48, 48, 44) 5px 4px 0px;
+  box-shadow: rgb(48, 48, 44) 5px 4px 0px;
+  transition: scale .1s ease-in-out;
+  padding: 14px;
+  cursor: pointer;
+}
+.app .appBg:hover{
+  scale: 1.05;
+}
+.app h4{
+  font-size: large;
+  margin: 10px 0 20px 0;
+}
+.app svg{
+  width: 40px;
+  height: 40px;
+}
+
+.screenBot{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: larger;
+  background-color: #F0EADB;
+  /* border: 5px solid rgb(48, 48, 44); */
+}
+.screenBot > *{
+  background-color: #F0EADB;
+  border: 5px solid rgb(48, 48, 44);
+}
+.screenBot .botMenu{
+  /* width: 100%; */
+  /* padding: 10px 55px; */
+  width: 100%;
+  max-width: 166.467px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.screenBot .botMenu:hover{
+  transition: .1s ease-in-out;
+  background-color: #e0dacc;
+  cursor: pointer;
+
+}
+.screenBot .botSpace{
+  width: 100%;
+  border-left: none;
+  border-right: none;
+
+}
+.screenBot .botTimeDate{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding: 10px 55px; */
+  width: 100%;
+  max-width: 222.1px;
+}
+.screenBotMenu{
+  position: absolute;
+  left: 0px;
+  bottom: -150px;
+  z-index: -1;
+  display: flex;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  flex-direction: column;
+  border: 5px solid rgb(48, 48, 44);
+  background-color: black;
+  /* transition: 1s ease-in; */
+  
+}
+.screenBotMenu button:nth-child(1){
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.screenBotMenu button{
+  border-radius: 0;
+  background-color: #F0EADB;
+  padding: 12px;
+  cursor: pointer;
+  /* -webkit-box-shadow: rgb(48, 48, 44) 5px 4px 0px;
+  -moz-box-shadow: rgb(48, 48, 44) 5px 4px 0px;
+  box-shadow: rgb(48, 48, 44) 5px 4px 0px; */
+}
+.screenBotMenu button:hover{
+  transition: .1s ease-in-out;
+  background-color: #e0dacc;
+}
+@media all and (max-width: 421px){
+  .screenBot .botSpace{
+    display: none;
+  }
+  .screenBot > *{
+    border: 0px solid rgb(48, 48, 44);
+  }
+  .screenBot{
+    border: 5px solid rgb(48, 48, 44);
+  }
+  .screenBot .botMenu{
+    border-right: 2.5px solid rgb(48, 48, 44);
+  }
+  .screenBot .botTimeDate{
+    border-left: 2.5px solid rgb(48, 48, 44);
+
+  }
+} 
+
+
+
+
+
+/* Windows */
+.windowsWrapper{
+  position: absolute;
+  z-index: 110;
+  top: 10px;
+  left: 40px;
+  width: 630px;
+  background-color: #F0EADB;
+  /* outline: 1px dotted red; */
+  border: 5px solid rgb(48, 48, 44);
+  box-shadow: rgb(48, 48, 44) 20px 20px 0px;
+  min-width: 500px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  max-width: calc(100% - 20px);
+  max-height: calc(100% - 20px);
+  overflow: hidden;
+  user-select: none;
+}
+.windowsTopBar{
+  min-height: 70px;
+  position: relative;
+  border-bottom: 5px solid rgb(48, 48, 44);
+}
+.windowsExit{
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  display: flex;
+  -moz-box-pack: center;
+  justify-content: center;
+  -moz-box-align: center;
+  align-items: center;
+  background-color: rgb(240, 234, 219);
+  border: 5px solid rgb(48, 48, 44);
+  color: rgb(28, 28, 28);
+  box-shadow: rgb(48, 48, 44) 2px 2px 0px;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+.windowsContent{
+  display: flex;
+  flex-direction: column;
+  -moz-box-pack: center;
+  justify-content: center;
+  text-align: left;
+  padding: 32px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+
+
+#button{
+  position: absolute; /* bottom-right-corner */
+  bottom: 0; /* bottom-right-corner */
+  right: 0; /* bottom-right-corner */
+  cursor: nwse-resize;
+  letter-spacing: 0.05em;
+  color: #f1f1f1;
+  padding: 1px 3px 1px 1px;
+  /* outline: 1px dotted red; */
+  width: 50px;
+  height: 50px;
+}
+
+#button:hover {
+  color: #00909e;
+}
